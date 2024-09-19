@@ -1,0 +1,13 @@
+services:
+  frontend:
+    volumes:
+      - ./frontend/src:/usr/share/nginx/html/src
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    volumes:
+      - ./backend:/usr/src/app
+    environment:
+      - NODE_ENV=development
+      - DEBUG=true
